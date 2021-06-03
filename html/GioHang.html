@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../css/all.min.css" />
+    
+    <link rel="stylesheet" href="../css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../css/GioHang.css">
+   
+</head>
+<body>
+    
+    <!-- header -->
+    <div class=" row p-3" id="header">
+        <div class="col-2"></div>
+
+        <div class="col-7">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 mt-n4 ">
+                    <button id="btntimkiem" type="button" class="btn btn-info">Tìm kiếm</button>
+                    <input type="search" name="txtSearch" id="txtSearch" class="col-12 p-2 mt-2 form-control no-boder border border-dark w-100 " placeholder="Nhập từ khóa tìm kiếm...">
+                </div>
+            </div>
+
+        </div>
+        <div class="giohang col-1">
+            <button type="button" style="border: none;"><a href="./GioHang.html"><i class="fas fa-shopping-cart" style="color: #82c91e;"></i></a></button>
+        </div>
+        <div class="taikhoan col-2">
+            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal_DN"><i class="fa fa-user fa-1x m-2 " aria-hidden="true"></i><span id="btnTK">Đăng nhập</span></button>
+        </div>
+
+    </div>
+
+    <nav class="navbar navbar-expand-md bg-white ">
+        <a href="./TrangChu.html " class="navbar-brand ml-lg-3 ml-md-auto pl-5"><img src="../images/logo1.png" width="80%" height="80%" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myMenu">
+          <!-- <span class="navbar-toggler-icon bg-danger"></span> -->
+          <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="myMenu">
+            <ul class="menu navbar-nav">
+                <li class="navbar-item "><a href="#thuonghieu" title="Thương Hiệu" class="navbar-link active">Thương Hiệu</a>
+                    <ul class="navbar-nav-scroll">
+                        <div class=" row bg-light ">
+                            <div class="col-lg-4 col-md-12 ">
+                                <th>CÁC HÃNG BÁN CHẠY</th>
+                                <li><a href="#">> Sage <span class="bg-warning  p-1">new</span></a></li>
+                                <li><a href="#">> Fouetté</a></li>
+                                <li><a href="#">> Casio</a></li>
+                                <li><a href="#">> Citizen</a></li>
+                                <li><a href="#">> Seiko</a></li>
+                                <li><a href="#">> OP</a></li>
+                                <li><a href="#">> Daniel Wellington (DW)</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12  ">
+                                <th>KHUYÊN DÙNG</th>
+                                <li><a href="#">> Orient</a></li>
+                                <li><a href="#">> G-Shock & Baby-G <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Fossil</a></li>
+                                <li><a href="#">> Skagen</a></li>
+                                <li><a href="#">> Michael Kors</a></li>
+                                <li><a href="#">> Candino</a></li>
+                                <li><a href="#">> Adriatica</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12 ">
+                                <th>CÁC DÒNG ĐẶC BIỆT</th>
+                                <li><a href="#">> Limited Edition <span class="bg-danger  font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Thông Minh</a></li>
+                                <li><a href="#">> Đồng Hồ Quân Đội</a></li>
+                                <li><a href="#">> Đồng Hồ Điện tử</a></li>
+                                <li><a href="#">> Đồng Hồ Đính Kim Cương <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Xà Cừ</a></li>
+                                <li><a href="#">> Đồng Hồ Trẻ Em</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li class="navbar-item pl-5"><a href="#titleDHNam" title="Đồng hồ Nam" class="navbar-link">Nam</a>
+                    <ul class="navbar-nav-scroll">
+                        <div class=" row bg-light ">
+                            <div class="col-lg-4 col-md-12">
+                                <th>KHOẢNG GIÁ</th>
+                                <li><a href="#">> Dưới 2tr</a></li>
+                                <li><a href="#">> 2tr - 3tr</a></li>
+                                <li><a href="#">> 3tr - 4tr</a></li>
+                                <li><a href="#">> 4tr - 5tr</a></li>
+                                <li><a href="#">> trên 5tr</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12  ">
+                                <th>CHẤT LIỆU DÂY</th>
+                                <li><a href="#">> Casio <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Citizen</a></li>
+                                <li><a href="#">> OP</a></li>
+                                <li><a href="#">> Doxa</a></li>
+                                <li><a href="#">> Tissot</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <th>THƯƠNG HIỆU HOT</th>
+                                <li><a href="#">> Đồng Hồ Siêu Mỏng<span class="bg-danger  font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Vàng 18K </a></li>
+                                <li><a href="#">> Đồng Hồ Lộ Máy(Skeleton)</a></li>
+                                <li><a href="#">> Đồng Hồ Đính Kim Cương <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Phiên Bản Giới Hạn</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+
+                <li class="navbar-item" style="padding-left: 55px;"><a href="#titleDHNU" title="Đồng hồ Nữ" class="navbar-link">Nữ</a>
+                    <ul class="navbar-nav-scroll">
+                        <div class=" row bg-light ">
+                            <div class="col-lg-4 col-md-12">
+                                <th>KHOẢNG GIÁ</th>
+                                <li><a href="#">> Dưới 2tr</a></li>
+                                <li><a href="#">> 2tr - 3tr</a></li>
+                                <li><a href="#">> 3tr - 4tr</a></li>
+                                <li><a href="#">> 4tr - 5tr</a></li>
+                                <li><a href="#">> trên 5tr</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12  ">
+                                <th>THƯƠNG HIỆU HOT</th>
+                                <li><a href="#">> Casio <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Citizen</a></li>
+                                <li><a href="#">> OP</a></li>
+                                <li><a href="#">> Doxa</a></li>
+                                <li><a href="#">> Tissot</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <th>CÁC DÒNG ĐẶC BIỆT</th>
+                                <li><a href="#">> Đồng Hồ Siêu Mỏng<span class="bg-danger  font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Vàng 18K </a></li>
+                                <li><a href="#">> Đồng Hồ Lộ Máy(Skeleton)</a></li>
+                                <li><a href="#">> Đồng Hồ Đính Kim Cương <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Phiên Bản Giới Hạn</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+
+                <li class="navbar-item" style="padding-left: 35px;"><a href="#titleDHCAPDOI" title="Đồng Hồ Đôi" class="navbar-link">Cặp đôi</a>
+                    <ul class="navbar-nav-scroll">
+                        <div class=" row bg-light ">
+                            <div class="col-lg-4 col-md-12">
+                                <th>KHOẢNG GIÁ</th>
+                                <li><a href="#">> Dưới 2tr</a></li>
+                                <li><a href="#">> 2tr - 3tr</a></li>
+                                <li><a href="#">> 3tr - 4tr</a></li>
+                                <li><a href="#">> 4tr - 5tr</a></li>
+                                <li><a href="#">> trên 5tr</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12  ">
+                                <th>THƯƠNG HIỆU HOT</th>
+                                <li><a href="#">> Casio <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Citizen</a></li>
+                                <li><a href="#">> OP</a></li>
+                                <li><a href="#">> Doxa</a></li>
+                                <li><a href="#">> Tissot</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <th>CÁC DÒNG ĐẶC BIỆT</th>
+                                <li><a href="#">> Đồng Hồ Siêu Mỏng<span class="bg-danger  font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Vàng 18K </a></li>
+                                <li><a href="#">> Đồng Hồ Lộ Máy(Skeleton)</a></li>
+                                <li><a href="#">> Đồng Hồ Đính Kim Cương <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Phiên Bản Giới Hạn</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li class="navbar-item"style="padding-left: 30px;"><a href="#" title="Phụ kiện - Dịch vụ " class="navbar-link">Phụ kiện</a>
+                    <ul class="navbar-nav-scroll">
+                        <div class=" row bg-light ">
+                            <div class="col-lg-4 col-md-12">
+                                <th>KHOẢNG GIÁ</th>
+                                <li><a href="#">> Dưới 2tr</a></li>
+                                <li><a href="#">> 2tr - 3tr</a></li>
+                                <li><a href="#">> 3tr - 4tr</a></li>
+                                <li><a href="#">> 4tr - 5tr</a></li>
+                                <li><a href="#">> trên 5tr</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12  ">
+                                <th>THƯƠNG HIỆU HOT</th>
+                                <li><a href="#">> Casio <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Citizen</a></li>
+                                <li><a href="#">> OP</a></li>
+                                <li><a href="#">> Doxa</a></li>
+                                <li><a href="#">> Tissot</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <th>CÁC DÒNG ĐẶC BIỆT</th>
+                                <li><a href="#">> Đồng Hồ Siêu Mỏng<span class="bg-danger  font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Vàng 18K </a></li>
+                                <li><a href="#">> Đồng Hồ Lộ Máy(Skeleton)</a></li>
+                                <li><a href="#">> Đồng Hồ Đính Kim Cương <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">> Đồng Hồ Phiên Bản Giới Hạn</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+
+                <li class="navbar-item dropdown" style="padding-left: 30px;"><a href="#" title="Liên Hệ - Hỏi Đáp" class="navbar-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">Dịch Vụ</a>
+
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Sửa chữa đồng hồ</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Bảo dưỡng đồng hồ</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">In logo lên đồng hồ</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Khắc laser lên đồng hồ</a>
+                    </div>
+                </li>
+                <li class="navbar-item dropdown" style="padding-left: 30px;"><a href="#" title="Liên Hệ - Hỏi Đáp" class="navbar-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Liên hệ</a>
+
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="./GioiThieu.html">Thông tin về STOREY</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">AD : Văn Hoàng</a>
+                        <a class="dropdown-item" href="./LienHe.html">AD : Quang Huy</a>
+                        <a class="dropdown-item" href="#">AD : Gia Phúc</a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <!-- header -->
+
+    <!-- main -->
+    <div class="container  GioHang mt-5">  
+        <h2 class="text-center ">Danh Sách Sản Phẩm</h2>
+        <div>
+            <form action="">
+                <div class="row form-group form-row">
+                    <div class="col-6"></div>
+                    <div class="col-4">
+                        <input type="text" id="txtMasp" class="form-control" placeholder="Nhập mã sản phẩm cần tìm ">
+                        <span class="text-warning font-italic " id="thongbao"></span>
+                    </div>
+                    <button type="button" class="col-2 btn btn-info" id="btnTim" style="height: 40px;">Tìm</button>
+                </div>
+            </form>
+        </div>
+        <table class="table table-striped">
+            <thead>
+              <tr> 
+                <th>STT</th>
+                <th>Mã sản phẩm</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+              </tr>
+            </thead>
+            <tbody id="myTable">
+              <!-- <tr>
+                  <td class="td_stt">001</td> <td class="maID">MA123</td> <td class="img "><img  src="../images/img2.jpg" alt="img2"> dong ho nam</td> <td class="td_DonGia">22200000 đ</td> <td contenteditable="true" onkeyup="tinhTongtien();" class="td_SoLuong">2</td> <td class="td_ThanhTien">22200000 đ</td>
+              </tr> -->
+              
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2" class="font-weight-bold">Tổng thành tiền</td>
+                    <td class="font-weight-bold"> <label id="lblTongTien"></label></td>
+                </tr>
+            </tfoot>
+        </table>
+          <div>   
+              <input class="btn mb-4 btn-info" type="button" value="Thanh toán" id="thanhToan" >
+              <input class="btn mb-4 btn-info" type="button" value="Mua thêm sản phẩm" id="muaThem">
+          </div>
+    </div>
+    <!-- main -->
+
+    <!-- footer -->
+    <footer class="mt-5" style="background-color: #9ef1f1;">
+        <div class="head"></div>
+
+
+        <div class="center " style="width: 90%;">
+
+            <div class="mid row  pt-4 ">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-4 col-md-10 col-sm-10">
+                    <div style="clear: both;"></div>
+                    <div class="lien_he" title="Hotline: 1900.6666">
+                        <a href="tel:19006666" data-wpel-link="internal">1900.6666</a>
+                    </div>
+                    <div class="cont mt-3 mt-md-4">
+                        <b>CÔNG TY CỔ PHẦN TRỰC TUYẾN <a href="./TrangChu.html"
+                            class="h4 font-weight-bold">STOREY.</a></b>
+                    </div>
+                    <ul style="display: block;">
+                        <li>
+                            <span class="icon"><i class="fas fa-map-marked-alt fa-2x"></i></i></span>
+                            <span class="text">Địa chỉ: Số 12 Nguyễn Văn Bảo, Phường 14, Quận Gò Vấp, Thành phố Hồ Chí
+                            Minh</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fas fa-phone fa-2x"></i></span> Hotline:
+                            <a href="tel:18006005" title="Hotline" class="text hover"> 0123456789</a>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fas fa-envelope fa-2x"></i></span> Email: <a href="#" title="email" class="text hover"> ABC@gmail.com</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-10">
+                    <h5 class="text-uppercase">Hỗ trợ</h5>
+                    <hr class="light-mid">
+                    <ul class="menuFoot">
+                        <li><a href="/chinh-sach-chung/2/1.-Chinh-sach-bao-hanh.html" title="1. Chính sách bảo hành">1.
+                            Chính sách bảo hành</a></li>
+                        <li><a href="/chinh-sach-chung/4/2.-Chinh-sach-doi-hang.html" title="2. Chính sách đổi hàng">2.
+                            Chính sách đổi hàng</a></li>
+                        <li><a href="/chinh-sach-chung/5/3.-Chinh-sach-bao-mat.html" title="3. Chính sách bảo mật">3.
+                            Chính sách bảo mật</a></li>
+                        <li><a href="/chinh-sach-chung/6/4.-Chinh-sach-van-chuyen.html" title="4. Chính sách vận chuyển">4. Chính sách vận chuyển</a></li>
+                        <li><a href="/chinh-sach-chung/7/5.-Huong-dan-thanh-toan.html" title="5. Hướng dẫn thanh toán">5. Hướng dẫn thanh toán</a></li>
+                        <li><a href="/chinh-sach-chung/8/6.-Huong-dan-mua-hang.html" title="6. Hướng dẫn mua hàng">6.
+                            Hướng dẫn mua hàng</a></li>
+
+                    </ul>
+
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-10">
+                    <h5 class="text-uppercase">Sản Phẩm</h5>
+                    <hr class="light-mid">
+                    <ul class="menuFoot ">
+                        <li><a href="/sp/dong-ho-chinh-hang.html" title="Dong ho">Đồng hồ chính hãng</a></li>
+                        <li><a href="/kinh-mat-thoi-trang.html" title="Kính mát">Kính mắt thời trang</a></li>
+                        <li><a href="/phu-kien-dong-ho.html" title="Day dong ho">Dây đồng hồ</a></li>
+                        <li><a href="/sp/hop-dung-dong-ho.html" title="Hop dong ho">Hộp đựng đồng hồ</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-10">
+                    <h5 class="text-uppercase">Danh mục</h5>
+                    <hr class="light-mid ">
+                    <div style="clear: both;"></div>
+
+                    <ul class="tag">
+                        <li> <a href="#" class="mb-5" title="Cửa hàng">Hệ thống cửa hàng</a></li>
+                        <li> <a href="#" title="">Góc hỏi đáp</a> </li>
+                        <li><a href="#" title="Tin tức">Tin tức - Sự kiện</a></li>
+                        <li> <a href="#" title="About us">Giới thiệu</a></li>
+                    </ul>
+                </div>
+                <div class="col-1"></div>
+
+
+            </div>
+            <div class="bot col-md-10 text-left pb-2">
+                <hr class="light-100 ">
+                <div class="row">
+                    <div class="col-9">
+                        <p class="fRobotoB pb5 font-weight-bold  ">
+                            <a href="#">
+                                <h4 class="font-weight-bold">STOREY</h4>
+                            </a>
+                        </p>
+                        <h6 class="lh21 ">
+                            Nhà phân phối độc quyền các thương hiệu đồng hồ, nổi tiếng thế giới: Epos Swiss, Atlantic Swiss, Diamond D, Philippe Auguste, Jacques Lemans, Citizen, Aries Gold, dây da đồng hồ, dây đồng hồ đeo tay....
+                        </h6>
+                    </div>
+                    <div class="col-3">
+                        <h4 class="pt-3">SOCIAL PAGE:</h4>
+                        <a href="https://www.facebook.com" class="facebook mr-2"><i
+                            class="fab fa-facebook-square fa-2x "></i></a>
+                        <a href="https://www.youtube.com" class="youtube mr-2"><i class="fab fa-youtube fa-2x"></i></a>
+                        <a href="https://twitter.com" class="twitter mr-2"><i
+                            class="fab fa-twitter-square fa-2x"></i></a>
+                        <a href="https://www.instagram.com" class="instagram mr-2"><i
+                            class="fab fa-instagram-square fa-2x"></i></a>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div class="row pt-3 bg-dark">
+
+            <div class="col"></div>
+            <div class="logo_footer col-md-4 col-sm-12 container-1">
+
+                <h6 style="color: white;">Copyright © 2008-2020 STOREY.</h6>
+            </div>
+            <div class="logo_footer col-md-6 col-sm-12 container-1">
+
+                <p id="footend" style="color: white;">Bản quyền thuộc về <a href="./TrangChu.html">STOREY</a> Cung cấp bởi <a href="#">VanHoang</a> - <a href="#">QuangHuy</a> - <a href="#">GiaPhuc</a></p>
+            </div>
+
+            <div class="col"></div>
+        </div>
+
+    </footer>
+
+    <!-- footer -->
+
+    <script>
+        let sp1 = {maSP : "SP0001",hinhanh: "../images/126_L4.759.4.12.2-399x399.jpg", tenSP: "Casio AE-1200WHD-1AVDF", donGia: 35000000,soLuong: 3};
+        let sp2 = {maSP : "SP0002",hinhanh: "../images/36trieu.jpg", tenSP: "Citizen BI5006-81P", donGia: 42000000,soLuong: 2};
+        let sp3 = {maSP : "SP0003",hinhanh: "../images/24_53229-SVMWSV-6-399x399.jpg", tenSP: "Citizen NH8350-59A", donGia: 1250000, soLuong: 1};
+        let sp4 = {maSP : "SP0004",hinhanh: "../images/283_ES4369-399x399.jpg", tenSP: "Doxa 131.60.022.02", donGia: 45000000, soLuong: 10};
+        let sp5 = {maSP : "SP0005",hinhanh: "../images/dongho6.jpg", tenSP: "Doxa D173TCM – Nam – Kính Sapphire", donGia: 31200000, soLuong: 1};
+        let sp6 = {maSP : "SP0006",hinhanh: "../images/qc9.jpg", tenSP: "Longines L4.759.4.12.2 – Nam – Kính Sapphire", donGia: 5000000, soLuong: 2};
+        let sp7 = {maSP : "SP0007",hinhanh: "../images/qc7.jpg", tenSP: "Orient SUND6002W0 – Nam – Quartz (Pin)", donGia: 3504000, soLuong: 1};
+        let sp8 = {maSP : "SP0008",hinhanh: "../images/qc4.jpg", tenSP: "Tissot T006.407.36.263.00 – Nam – Kính Sapphire", donGia: 40000, soLuong: 20};
+        
+        let dssp = [sp1, sp2, sp3, sp4, sp5, sp6, sp7, sp8 ];
+        let i = 0;
+
+        function napSP(sanpham, index){
+            let tbl = document.getElementById("myTable");
+            let row = "<tr> <td class=''>"+(++i)+"</td> <td class='maID'>"+sanpham.maSP+"</td> <td class='img'><img  src="+sanpham.hinhanh+" alt='anh'> "
+                +sanpham.tenSP+"</td> <td class='td_DonGia'>"+sanpham.donGia+"</td> <td contenteditable='true' onkeyup='return tinhTongtien();' class='td_SoLuong'>"
+                +sanpham.soLuong+"</td> <td class='td_ThanhTien'>"+sanpham.soLuong*sanpham.donGia+"</td></tr>";
+            let newRow = tbl.insertRow(tbl.rows.length);
+            newRow.innerHTML = row;
+        }
+
+        // function tinhTongTien() {
+        //     let table = document.getElementById("myTable");
+        //     let s = 0;
+        //     for (let i = 0; i < table.rows.length; i++) {
+        //         let donGia = table.rows[i].cells[4].innerHTML;
+        //         let soLuong = table.rows[i].cells[5].innerHTML;
+        //         let thanhTien = donGia*soLuong;
+        //         table.rows[i].cells[6].insertRow = thanhTien;
+        //         s +=thanhTien;
+        //     }
+        //     $("#lblTongTien").html(s);
+            
+        // }
+        //
+        function tinhTongTien(){
+            let tbl = document.getElementById("myTable");
+            let tongtien = 0;
+            for(let i = 0; i < tbl.rows.length; i++){
+                let dongia = tbl.rows[i].cells[4].innerHTML;
+                let soluong = tbl.rows[i].cells[5].innerHTML;
+                let thanhtien = dongia * soluong;
+                // tbl.rows[i].cells[6].innerHTML = ""+thanhtien;
+                tongtien += thanhtien;
+            }
+            $("#lblTongTien").html(tongtien);
+        }
+
+
+
+        window.onload = function() {
+            dssp.forEach(napSP);
+            tinhTongTien();
+
+        }
+        $("#thanhToan").click(function ThanhToan() {
+            alert("bạn đã thanh toán thành công.");
+            $("#lblTongTien").html("0đ");
+            $("#myTable").html("<h4 class='text-warning'>Bạn hãy chọn đồ cần mua trước. <a href='./TrangChu.html'>Đến trang mua đồ.</a></h4>");
+        });
+        $("#muaThem").click(function muaThem() {
+            location.assign("./TrangChu.html");
+             
+        });
+
+    </script>
+</body>
+</html>

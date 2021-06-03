@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chitietsanpham</title>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="../css/all.min.css" />
+
+    <link rel="stylesheet" href="../css/ChiTietSanPham.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+
+
+</head>
+<script>
+    function icsp1() {
+        document.getElementById("iconttsp").innerHTML = "<img src='../images/dongho2.jpg' width='550px' />"
+    }
+
+    function icsp2() {
+        document.getElementById("iconttsp").innerHTML = "<img src='../images/dongho3.jpg' width='550px' />"
+    }
+
+    function icsp3() {
+        document.getElementById("iconttsp").innerHTML = "<img src='../images/dongho4.jpg' width='550px' />"
+    }
+
+    function icsp4() {
+        document.getElementById("iconttsp").innerHTML = "<img src='../images/dongho5.jpg' width='540px' height='550px' />"
+    }
+
+
+    var soluong = 1;
+
+    function cong() {
+        soluong = soluong + 1
+        document.getElementById("aaaa").value = soluong;
+    }
+
+    function tru() {
+        if (document.getElementById("aaaa").value != "1") {
+            soluong = soluong - 1;
+            document.getElementById("aaaa").value = soluong;
+        }
+    }
+</script>
+
+<body>
+
+    <div class=" row p-3" id="header">
+        <div class="col-2"></div>
+
+        <div class="col-7">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 mt-n4 ">
+                    <button type="button" class="btn btn-info">Tìm kiếm</button>
+                    <input type="search" name="txtSearch" id="txtSearch" class="col-12 p-2 mt-2 form-control no-boder border border-dark w-100 " placeholder="Nhập từ khóa tìm kiếm...">
+                </div>
+            </div>
+
+        </div>
+        <div class="giohang col-1">
+            <button type="button" style="border: none;"><a href="./GioHang.html"><i class="fas fa-shopping-cart" style="color: #82c91e;"></i></a></button>
+        </div>
+        <div class="taikhoan col-2">
+            <button type="button" class="btn btn-light" data-toggle="modal" data-target="#myModal_DN"><i class="fa fa-user fa-1x m-2 " aria-hidden="true"></i><span id="btnTK">Đăng nhập</span></button>
+        </div>
+
+    </div>
+
+    <nav class="navbar navbar-expand-md bg-white ">
+        <a href="./TrangChu.html " class="navbar-brand ml-lg-3 ml-md-auto pl-5"><img src="../images/logo1.png" width="80%" height="80%" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myMenu">
+          <!-- <span class="navbar-toggler-icon bg-danger"></span> -->
+          <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="myMenu">
+            <ul class="menu navbar-nav text-center">
+                <li class="navbar-item "><a href="#thuonghieu" title="Thương Hiệu" class="navbar-link active">Thương Hiệu</a>
+                    <ul class="navbar-nav-scroll">
+                        <div class=" row bg-light ">
+                            <div class="col-lg-4 col-md-12 ">
+                                <th>CÁC HÃNG BÁN CHẠY</th>
+                                <li><a href="#">Sage <span class="bg-warning  p-1">new</span></a></li>
+                                <li><a href="#">Fouetté</a></li>
+                                <li><a href="#">Casio</a></li>
+                                <li><a href="#">Citizen</a></li>
+                                <li><a href="#">Seiko</a></li>
+                                <li><a href="#">OP</a></li>
+                                <li><a href="#">Daniel Wellington (DW)</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12  ">
+                                <th>KHUYÊN DÙNG</th>
+                                <li><a href="#">Orient</a></li>
+                                <li><a href="#">G-Shock & Baby-G <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">Fossil</a></li>
+                                <li><a href="#">Skagen</a></li>
+                                <li><a href="#">Michael Kors</a></li>
+                                <li><a href="#">Candino</a></li>
+                                <li><a href="#">Adriatica</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12 ">
+                                <th>CÁC DÒNG ĐẶC BIỆT</th>
+                                <li><a href="#">Limited Edition <span class="bg-danger  font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">Đồng Hồ Thông Minh</a></li>
+                                <li><a href="#">Đồng Hồ Quân Đội</a></li>
+                                <li><a href="#">Đồng Hồ Điện tử</a></li>
+                                <li><a href="#">Đồng Hồ Đính Kim Cương <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">Đồng Hồ Xà Cừ</a></li>
+                                <li><a href="#">Đồng Hồ Trẻ Em</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li class="navbar-item"><a href="#titleDHNam" title="Đồng hồ Nam" class="navbar-link">Nam</a>
+                    <ul class="navbar-nav-scroll">
+                        <div class=" row bg-light ">
+                            <div class="col-lg-4 col-md-12">
+                                <th>KHOẢNG GIÁ</th>
+                                <li><a href="#">Dưới 2tr</a></li>
+                                <li><a href="#">2tr - 3tr</a></li>
+                                <li><a href="#">3tr - 4tr</a></li>
+                                <li><a href="#">4tr - 5tr</a></li>
+                                <li><a href="#">trên 5tr</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12  ">
+                                <th>THƯƠNG HIỆU HOT</th>
+                                <li><a href="#">Casio <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">Citizen</a></li>
+                                <li><a href="#">OP</a></li>
+                                <li><a href="#">Doxa</a></li>
+                                <li><a href="#">Tissot</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <th>CÁC DÒNG ĐẶC BIỆT</th>
+                                <li><a href="#">Đồng Hồ Siêu Mỏng<span class="bg-danger  font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">Đồng Hồ Vàng 18K </a></li>
+                                <li><a href="#">Đồng Hồ Lộ Máy(Skeleton)</a></li>
+                                <li><a href="#">Đồng Hồ Đính Kim Cương <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">Đồng Hồ Phiên Bản Giới Hạn</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+
+                <li class="navbar-item"><a href="#titleDHNu" title="Đồng hồ Nữ" class="navbar-link">Nữ</a>
+                    <ul class="navbar-nav-scroll">
+                        <div class=" row bg-light ">
+                            <div class="col-lg-4 col-md-12">
+                                <th>KHOẢNG GIÁ</th>
+                                <li><a href="#">Dưới 2tr</a></li>
+                                <li><a href="#">2tr - 3tr</a></li>
+                                <li><a href="#">3tr - 4tr</a></li>
+                                <li><a href="#">4tr - 5tr</a></li>
+                                <li><a href="#">trên 5tr</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12  ">
+                                <th>THƯƠNG HIỆU HOT</th>
+                                <li><a href="#">Casio <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">Citizen</a></li>
+                                <li><a href="#">OP</a></li>
+                                <li><a href="#">Doxa</a></li>
+                                <li><a href="#">Tissot</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <th>CÁC DÒNG ĐẶC BIỆT</th>
+                                <li><a href="#">Đồng Hồ Siêu Mỏng<span class="bg-danger  font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">Đồng Hồ Vàng 18K </a></li>
+                                <li><a href="#">Đồng Hồ Lộ Máy(Skeleton)</a></li>
+                                <li><a href="#">Đồng Hồ Đính Kim Cương <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">Đồng Hồ Phiên Bản Giới Hạn</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+
+                <li class="navbar-item"><a href="#titleDHCAPDOI" title="Đồng Hồ Đôi" class="navbar-link">Cặp đôi</a>
+                    <ul class="navbar-nav-scroll">
+                        <div class=" row bg-light ">
+                            <div class="col-lg-4 col-md-12">
+                                <th>KHOẢNG GIÁ</th>
+                                <li><a href="#">Dưới 2tr</a></li>
+                                <li><a href="#">2tr - 3tr</a></li>
+                                <li><a href="#">3tr - 4tr</a></li>
+                                <li><a href="#">4tr - 5tr</a></li>
+                                <li><a href="#">trên 5tr</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12  ">
+                                <th>THƯƠNG HIỆU HOT</th>
+                                <li><a href="#">Casio <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">Citizen</a></li>
+                                <li><a href="#">OP</a></li>
+                                <li><a href="#">Doxa</a></li>
+                                <li><a href="#">Tissot</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <th>CÁC DÒNG ĐẶC BIỆT</th>
+                                <li><a href="#">Đồng Hồ Siêu Mỏng<span class="bg-danger  font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">Đồng Hồ Vàng 18K </a></li>
+                                <li><a href="#">Đồng Hồ Lộ Máy(Skeleton)</a></li>
+                                <li><a href="#">Đồng Hồ Đính Kim Cương <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">Đồng Hồ Phiên Bản Giới Hạn</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li class="navbar-item"><a href="#" title="Phụ kiện - Dịch vụ " class="navbar-link">Phụ kiện</a>
+                    <ul class="navbar-nav-scroll">
+                        <div class=" row bg-light ">
+                            <div class="col-lg-4 col-md-12">
+                                <th>KHOẢNG GIÁ</th>
+                                <li><a href="#">Dưới 2tr</a></li>
+                                <li><a href="#">2tr - 3tr</a></li>
+                                <li><a href="#">3tr - 4tr</a></li>
+                                <li><a href="#">4tr - 5tr</a></li>
+                                <li><a href="#">trên 5tr</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12  ">
+                                <th>THƯƠNG HIỆU HOT</th>
+                                <li><a href="#">Casio <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">Citizen</a></li>
+                                <li><a href="#">OP</a></li>
+                                <li><a href="#">Doxa</a></li>
+                                <li><a href="#">Tissot</a></li>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <th>CÁC DÒNG ĐẶC BIỆT</th>
+                                <li><a href="#">Đồng Hồ Siêu Mỏng<span class="bg-danger  font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">Đồng Hồ Vàng 18K </a></li>
+                                <li><a href="#">Đồng Hồ Lộ Máy(Skeleton)</a></li>
+                                <li><a href="#">Đồng Hồ Đính Kim Cương <span class="bg-danger font-weight-bold p-1">HOT</span></a></li>
+                                <li><a href="#">Đồng Hồ Phiên Bản Giới Hạn</a></li>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+
+                <li class="navbar-item dropdown"><a href="#" title="Liên Hệ - Hỏi Đáp" class="navbar-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true">Dịch Vụ</a>
+
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Sửa chữa đồng hồ</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Bảo dưỡng đồng hồ</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">In logo lên đồng hồ</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Khắc laser lên đồng hồ</a>
+                    </div>
+                </li>
+                <li class="navbar-item dropdown"><a href="#" title="Liên Hệ - Hỏi Đáp" class="navbar-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Liên hệ</a>
+
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="./GioiThieu.html">Thông tin về STOREY</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">AD : Văn Hoàng</a>
+                        <a class="dropdown-item" href="./LienHe.html">AD : Quang Huy</a>
+                        <a class="dropdown-item" href="#">AD : Gia Phúc</a>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+    <hr>
+    
+    <div class="container">
+        <span class="ttd1"><a href="./TrangChu.html">TRANG CHỦ</a> > <strong>CHI TIẾT SẢN PHẨM</strong></span><br>
+        <div class="row">
+            <h2 style="border-bottom:1px solid #808080;padding-bottom:10px; margin-top: 50px;">CASIO EFR-527D-2AVUDF – NAM – QUARTZ (PIN) – DÂY KIM LOẠI
+            </h2>
+            <div class="row">
+                <div class="col-6" id="imgsp">
+                    <div class="">
+                        <div id="iconttsp"><img src="../images/dongho1.jpg" width="550px" /></div>
+                    </div>
+                    <ul class="iconsp">
+                        <li class="selected">
+                            <a onclick="icsp1()"><img src="../images/dongho2.jpg" /></a>
+                        </li>
+                        <li class="selected">
+                            <a onclick="icsp2()"><img src="../images/dongho3.jpg" /></a>
+                        </li>
+                        <li class="selected">
+                            <a onclick="icsp3()"><img src="../images/dongho4.jpg" /></a>
+                        </li>
+                        <li class="selected">
+                            <a onclick="icsp4()"><img src="../images/dongho5.jpg" /></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <p class="tien">36.940.000<u>đ</u></p>
+                    <div class="dichvu">
+                        <form class="form">
+                            <label>Chọn thêm dịch vụ: </label><br />
+                            <input type="checkbox" id="giaohang" />
+                            <label for="giaohang">Giao hàng từ của hàng gần bạn nhất</label><br />
+                            <input type="checkbox" id="huongdan" />
+                            <label for="huongdan">Hướng dẫn bảo quản, giải đáp thắc mắc</label><br />
+                            <input type="checkbox" id="mau" />
+                            <label for="mau">Lựa chọn thêm nhiều màu khác</label><br />
+                        </form>
+                        <div class="col-md-12" style="margin-top:10px">
+                            <div class="row">
+                                Chọn số lượng:
+                                <input type="button" value="-" style="padding-left:10px;padding-right:10px" onclick="tru()">
+                                <input id="aaaa" type="text" value="1" style="width:50px;text-align:center" readonly>
+                                <input type="button" value="+" style="padding-left:10px;padding-right:10px" onclick="cong()">
+                            </div>
+                        </div>
+                        <div class="anhdong">
+
+
+                            <!-- Trigger the modal with a button -->
+                            <img data-toggle="modal" data-target="#myModal" src="../images/anhdong1.gif" alt="">
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class=" video modal-content">
+
+                                        <div class="modal-body">
+                                            <video width="600" height="400" controls>
+                                                    <source src="../video/videoamazingwatches.mp4" type="video/mp4">
+                                                  </video>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <!-- Trigger the modal with a button -->
+                            <img data-toggle="modal" data-target="#myModal2" src="../images/anhdong2.gif" alt="">
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal2" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class="video modal-content">
+
+                                        <div class="modal-body">
+                                            <video width="600" height="400" controls>
+                                                    <source src="../video/videohdsd.mp4" type="video/mp4">
+                                                  </video>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+
+                            <!-- Trigger the modal with a button -->
+                            <img data-toggle="modal" data-target="#myModal3" src="../images/anhdong3.gif" alt="">
+                            <!-- Modal -->
+                            <div class=" modal fade" id="myModal3" role="dialog">
+                                <div class="modal-dialog">
+
+                                    <!-- Modal content-->
+                                    <div class=" video modal-content">
+
+                                        <div class="modal-body">
+                                            <video width="600" height="400" controls>
+                                                    <source src="../video/videoreview.mp4" type="video/mp4">
+                                                  </video>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <div class="btn col-md-12 muangay">
+                            MUA NGAY
+                        </div>
+
+
+
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="btn col-md-12 themvaogio">
+                                    <a style="color: white;" href="./GioHang.html">THÊM VÀO GIỎ HÀNG</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="text-align:center;padding-bottom:5px;">Gọi đặt mua: <a>1900.6666</a> (miễn phí - 7:30-22:00)</div>
+                    </div>
+                    <div style="border-top:1px solid #808080">
+                        <h4 class="text-center">Thông tin sản phẩm</h4>
+                        <ol style="list-style:circle;padding:5px;">
+                            <li><b>Thương hiệu:</b>Casio</li>
+                            <li><b>Số hiệu sản phẩm:</b> EFR-527D-2AVUDF</li>
+                            <li><b>Xuất Xứ:</b>Nhật Bản</li>
+                            <li><b>Giới Tính:</b>Nam</li>
+                            <li><b>Kính:</b>Mineral Crystal (Kính Cứng)</li>
+                            <li><b>Máy:</b>Quartz (Pin)</li>
+                            <li><b>Bảo Hành Quốc Tế:</b> 1 Năm</li>
+                            <li><b>Đường Kính Mặt Số: </b>41mm</li>
+                            <li><b>Bề Dày Mặt Số:</b> 11.6 mm</li>
+                            <li><b>Màu Mặt Số: </b>Xanh</li>
+                            <li><b>Chống Nước:</b>10 ATM</li>
+                            <li><b>Chức Năng:</b> Lịch Ngày – Chronograph – Đồng hồ 24 giờ</li>
+                            <li><b>Nơi sản xuất (Tùy từng lô hàng):</b>Trung Quốc</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <a href="#">&oplus; Kiểm tra cửa hàng gần bạn nhất</a>
+                    <ul class="policy ">
+                        <li class="inpr">
+                            <span>Bộ sản phẩm gồm: <b>Tai nghe, Dây cáp Type-C, Sách hướng dẫn</b></span>
+                        </li>
+                        <li class="wrpr" style="padding-top:5px;">
+                            Bảo hành 1 năm 1 đổi 1.
+                            <a href="">Xem chi tiết</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <caption>
+            <h3>Các mẫu đồng hồ đang được quan tâm</h3>
+        </caption>
+        <div class="col-md-12">
+            <table class="table">
+                <tbody>
+                    <tr class="qcsp">
+                        <td>
+                            <a href="#">
+                                <div class="img_cen"><img src="../images/qc1.jpg" /><br /></div>
+
+                                CASIO AE-1200WHD-1AVDF – NAM – KÍNH NHỰA – QUARTZ (PIN)
+                                <br />
+                                <strong class="tien">1.308.000₫</strong>
+
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <div class="img_cen"><img src="../images/qc2.jpg" /><br /></div>
+
+                                CITIZEN BI5006-81P – NAM – QUARTZ (PIN) – DÂY KIM LOẠI<br />
+                                <strong class="tien">2.900.000₫</strong>
+
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <div class="img_cen"><img src="../images/qc3.jpg" /><br /></div>
+
+                                CITIZEN NH8350-59A – NAM – AUTOMATIC (TỰ ĐỘNG) – DÂY KIM LOẠI<br />
+                                <strong class="tien">5.250.000₫</strong>
+
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <div class="img_cen"><img src="../images/qc4.jpg" /><br /></div>
+
+                                DOXA 131.60.022.02 – NAM – KÍNH SAPPHIRE – QUARTZ (PIN) – DÂY DA<br />
+                                <strong class="tien">19.490.000₫</strong>
+
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <div class="img_cen"><img src="../images/qc5.jpg" /><br /></div>
+
+                                DOXA D173TCM – NAM – KÍNH SAPPHIRE – AUTOMATIC (TỰ ĐỘNG)<br />
+                                <strong class="tien">36.900.000₫</strong>
+
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+
+        <caption>
+            <h3>Một số sản phẩm khác</h3>
+        </caption>
+        <div class="col-md-12">
+            <table class="table">
+                <tbody>
+                    <tr class="qcsp">
+                        <td>
+                            <a href="#">
+                                <div class="img_cen"><img src="../images/qc6.jpg" /><br /></div>
+
+                                DOXA D203BGY – NAM – KÍNH SAPPHIRE – QUARTZ (PIN) – DÂY DA
+                                <br />
+                                <strong class="tien">15.830.000₫</strong>
+
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <div class="img_cen"><img src="../images/qc7.jpg" /><br /></div>
+
+                                DOXA D155RBL – NAM – KÍNH SAPPHIRE – QUARTZ (PIN) – DÂY DA<br />
+                                <strong class="tien">18.700.000₫</strong>
+
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <div class="img_cen"><img src="../images/qc8.jpg" /><br /></div>
+                                DOXA D203SBU – NAM – KÍNH SAPPHIRE – QUARTZ (PIN) – DÂY DA
+                                <br />
+                                <strong class="tien">14.400.000₫</strong>
+
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <div class="img_cen"><img src="../images/qc9.jpg" /><br /></div>
+
+                                OGIVAL 358-612AGR-GL-T – NAM – KÍNH SAPPHIRE – AUTOMATIC (TỰ ĐỘNG) <br />
+                                <strong class="tien">18.660.000₫</strong>
+
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <div class="img_cen"><img src="../images/qc10.jpg" /><br /></div>
+
+                                DOXA D174SCM – NỮ – KÍNH SAPPHIRE – QUARTZ (PIN) – DÂY KIM LOẠI<br />
+                                <strong class="tien">16.830.000₫</strong>
+
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <!-- danhgiasanpham -->
+        <h3>Đánh giá sản phẩm</h3>
+        <div class="stars">
+            <input class="fas fa-star fa-3x " style="color: yellow;" id="star" type="radio" name="star1" />
+            <input class="fas fa-star fa-3x " style="color: yellow;" id="star" type="radio" name="star2" />
+            <input class="fas fa-star fa-3x " style="color: yellow;" id="star" type="radio" name="star3" />
+            <input class="fas fa-star fa-3x " style="color: yellow;" id="star" type="radio" name="star4" />
+            <input class="fas fa-star fa-3x " style="color: yellow;" id="star" type="radio" name="star5" />
+
+        </div>
+
+    </div>
+    <br>
+
+    <!-- thongtinsanpham -->
+    <div class="col-md-12" id="gt" style="border-top:1px solid #808080">
+        <div class="col-md-8">
+            <div class="row">
+                <h2>Giới thiệu sản phẩm</h2><br />
+                <h4>ĐỒNG HỒ THỤY SỸ DOXA D173TCM SỞ HỮU 8 VIÊN KIM CƯƠNG</h4>
+
+                <p>
+                    – – – Các phiên bản của Doxa luôn dành được những đánh giá cao khi sở hữu mức độ hoàn thiện và độ tinh xảo vượt trội ở từng sản phẩm vì vậy nhận được sự tin tưởng từ phía nhiều người. <br>
+                    <img src="../images/ttsp1.jpg" /><br>
+                </p>
+                <p id="xemthem">
+                    <h4>8 VIÊN KIM CƯƠNG THẬT TRÊN MẶT SỐ ĐỒNG HỒ DOXA NAM</h4>
+                    – – – Làm nên giá trị vượt bậc của các phụ kiện không chỉ riêng ở phái đẹp mà còn đối với nam giới không thể thiếu một loại vật liệu đắt giá chính là kim cương. Loại đá quý sở hữu vẻ đẹp sang trọng, quý phái đồng thời được cho là biểu tượng của quyền
+                    lực <br>– – – Doxa D173TCM sở hữu đến 8 viên kim cương trên các vị trí chỉ thời gian ở mặt số đồng hồ. Với kích thước to rõ, chi tiết này đã tạo nên điểm nhấn ấn tượng và nâng tầm giá trị của phụ kiện dành cho nam.
+                    <br>
+
+
+                    <img src="../images/ttsp2.jpg" /> <br> – – – Phát huy được trọn vẹn vẻ đẹp của kim cương, các chi tiết xung quanh bao bọc tạo hình dạng đặc trưng của kim cương khiến nó trở nên nổi bật mỗi khi chiêm ngưỡng nơi mặt số đồng hồ. <br>–
+                    – – Cùng với đó dòng chữ “8 Genuine Diamond” xuất hiện trên mặt số một cách sắc sảo, rõ nét nhằm khẳng định giá trị thực sự của kim cương mà thương hiệu Doxa mang đến trong chính sản phẩm của mình. <br>– – – Đặc biệt, khi mua Doxa
+                    D173TCM tại Đồng Hồ Hải Triều quý khách hoàn toàn yên tâm khi nhận được một phiếu chứng nhận kim cương thật đến từ thương hiệu Doxa nổi tiếng. <br>
+
+
+                    <img src="../images/ttsp3.jpg" />
+
+                    <h4>MẶT SỐ VÀNG CÙNG HỌA TIẾT GUILLOCHÉ NỔI BẬT</h4>
+                    – – – Đồng hồ Doxa D173TCM tạo được sự khác biệt so với những chiếc đồng hồ thông thường khi sở hữu mặt số tông vàng cùng họa tiết Guilloché đậm nét nghệ thuật. <br>
+                    <img src="../images/ttsp4.jpg" /> <br>
+
+                    <h4>THIẾT KẾ MẶT SỐ ĐỒNG HỒ </h4> – – – Ngoài mặt số tông màu vàng cùng họa tiết Guilloché độc đáo đồng hồ Doxa D173TCM còn sở hữu các yếu tố đặc biệt khiến nhiều người rất bất ngờ, cụ thể: <br>
+                    <img src="../images/ttsp5.jpg" /> <br>
+
+
+                    <h4>NHỮNG THÔNG TIN KHÁC VỀ ĐỒNG HỒ DOXA D173TCM</h4>
+
+                    <p>– – – Đồng hồ Doxa D173TCM là sự lựa chọn hoàn hảo khi sở hữu nhiều chi tiết đắt giá cùng chất lượng mang đến những trải nghiệm tuyệt vời. Phiên bản có mức giá khoảng 36 triệu đồng được đánh giá rất xứng đáng với số tiền bỏ ra sở hữu.</p><br
+                    />
+                    <p>– – – Đặc biệt, khi mua <a href="#">đồng hồ Thụy Sỹ</a> này tại hệ thống Đồng Hồ Hải Triều quý khách sẽ được hưởng nhiều chính sách bảo hành hấp dẫn như bảo hành quốc tế 2 năm, tăng thêm 2 năm bảo hành chính hãng, <a href="#">miễn phí đánh bóng đồng hồ</a>                        4 năm,..</p>
+                </p>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer style="background-color: #9ef1f1;">
+            <div class="head"></div>
+    
+    
+            <div class="center " style="width: 90%;">
+    
+                <div class="mid row  pt-4 ">
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-4 col-md-10 col-sm-10">
+                        <div style="clear: both;"></div>
+                        <div class="lien_he" title="Hotline: 1900.6666">
+                            <a href="tel:19006666" data-wpel-link="internal">1900.6666</a>
+                        </div>
+                        <div class="cont mt-3 mt-md-4">
+                            <b>CÔNG TY CỔ PHẦN TRỰC TUYẾN <a href="./TrangChu.html"
+                                class="h4 font-weight-bold">STOREY.</a></b>
+                        </div>
+                        <ul style="display: block;">
+                            <li>
+                                <span class="icon"><i class="fas fa-map-marked-alt fa-2x"></i></i></span>
+                                <span class="text">Địa chỉ: Số 12 Nguyễn Văn Bảo, Phường 14, Quận Gò Vấp, Thành phố Hồ Chí
+                                Minh</span>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="fas fa-phone fa-2x"></i></span> Hotline:
+                                <a href="tel:18006005" title="Hotline" class="text hover"> 0123456789</a>
+                            </li>
+                            <li>
+                                <span class="icon"><i class="fas fa-envelope fa-2x"></i></span> Email: <a href="#" title="email" class="text hover"> ABC@gmail.com</a>
+                            </li>
+                        </ul>
+    
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-10">
+                        <h5 class="text-uppercase">Hỗ trợ</h5>
+                        <hr class="light-mid">
+                        <ul class="menuFoot">
+                            <li><a href="/chinh-sach-chung/2/1.-Chinh-sach-bao-hanh.html" title="1. Chính sách bảo hành">1.
+                                Chính sách bảo hành</a></li>
+                            <li><a href="/chinh-sach-chung/4/2.-Chinh-sach-doi-hang.html" title="2. Chính sách đổi hàng">2.
+                                Chính sách đổi hàng</a></li>
+                            <li><a href="/chinh-sach-chung/5/3.-Chinh-sach-bao-mat.html" title="3. Chính sách bảo mật">3.
+                                Chính sách bảo mật</a></li>
+                            <li><a href="/chinh-sach-chung/6/4.-Chinh-sach-van-chuyen.html" title="4. Chính sách vận chuyển">4. Chính sách vận chuyển</a></li>
+                            <li><a href="/chinh-sach-chung/7/5.-Huong-dan-thanh-toan.html" title="5. Hướng dẫn thanh toán">5. Hướng dẫn thanh toán</a></li>
+                            <li><a href="/chinh-sach-chung/8/6.-Huong-dan-mua-hang.html" title="6. Hướng dẫn mua hàng">6.
+                                Hướng dẫn mua hàng</a></li>
+    
+                        </ul>
+    
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-10">
+                        <h5 class="text-uppercase">Sản Phẩm</h5>
+                        <hr class="light-mid">
+                        <ul class="menuFoot ">
+                            <li><a href="/sp/dong-ho-chinh-hang.html" title="Dong ho">Đồng hồ chính hãng</a></li>
+                            <li><a href="/kinh-mat-thoi-trang.html" title="Kính mát">Kính mắt thời trang</a></li>
+                            <li><a href="/phu-kien-dong-ho.html" title="Day dong ho">Dây đồng hồ</a></li>
+                            <li><a href="/sp/hop-dung-dong-ho.html" title="Hop dong ho">Hộp đựng đồng hồ</a></li>
+                        </ul>
+    
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-10">
+                        <h5 class="text-uppercase">Danh mục</h5>
+                        <hr class="light-mid ">
+                        <div style="clear: both;"></div>
+    
+                        <ul class="tag">
+                            <li> <a href="#" class="mb-5" title="Cửa hàng">Hệ thống cửa hàng</a></li>
+                            <li> <a href="#" title="">Góc hỏi đáp</a> </li>
+                            <li><a href="#" title="Tin tức">Tin tức - Sự kiện</a></li>
+                            <li> <a href="#" title="About us">Giới thiệu</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-1"></div>
+    
+    
+                </div>
+                <div class="bot col-md-10 text-left pb-2">
+                    <hr class="light-100 ">
+                    <div class="row">
+                        <div class="col-9">
+                            <p class="fRobotoB pb5 font-weight-bold  ">
+                                <a href="#">
+                                    <h4 class="font-weight-bold">STOREY</h4>
+                                </a>
+                            </p>
+                            <h6 class="lh21 ">
+                                Nhà phân phối độc quyền các thương hiệu đồng hồ, nổi tiếng thế giới: Epos Swiss, Atlantic Swiss, Diamond D, Philippe Auguste, Jacques Lemans, Citizen, Aries Gold, dây da đồng hồ, dây đồng hồ đeo tay....
+                            </h6>
+                        </div>
+                        <div class="col-3">
+                            <h4 class="pt-3">SOCIAL PAGE:</h4>
+                            <a href="https://www.facebook.com" class="facebook mr-2"><i
+                                class="fab fa-facebook-square fa-2x "></i></a>
+                            <a href="https://www.youtube.com" class="youtube mr-2"><i class="fab fa-youtube fa-2x"></i></a>
+                            <a href="https://twitter.com" class="twitter mr-2"><i
+                                class="fab fa-twitter-square fa-2x"></i></a>
+                            <a href="https://www.instagram.com" class="instagram mr-2"><i
+                                class="fab fa-instagram-square fa-2x"></i></a>
+    
+                        </div>
+    
+    
+                    </div>
+                </div>  
+            </div>
+            <div class="row pt-3 bg-dark">
+    
+                <div class="col"></div>
+                <div class="logo_footer col-md-4 col-sm-12 container-1">
+    
+                    <h6 style="color: white;">Copyright © 2008-2020 STOREY.</h6>
+                </div>
+                <div class="logo_footer col-md-6 col-sm-12 container-1">
+    
+                    <p id="footend" style="color: white;">Bản quyền thuộc về <a href="./TrangChu.html">STOREY</a> Cung cấp bởi <a href="#">VanHoang</a> - <a href="#">QuangHuy</a> - <a href="#">GiaPhuc</a></p>
+                </div>
+    
+                <div class="col"></div>
+            </div>
+    
+        </footer>
+            <!-- footer -->
+
+
+</body>
+
+</html>
